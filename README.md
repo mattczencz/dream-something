@@ -8,6 +8,7 @@
 - React
 - Sass / SCSS
 - Framer Motion
+- Node version `20.13.0` (18 and greater should work)
 
 ### Installation steps:
 
