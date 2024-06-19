@@ -1,4 +1,4 @@
-@mixin cta-button($color, $size: "base") {
+@mixin cta-button($color, $size: "base", $reverse: "false") {
   background-color: $color;
   color: map-get($theme, "white");
   border: none;
@@ -7,6 +7,7 @@
   font-weight: 600;
   letter-spacing: 2.88px; // 24% of 12
   text-transform: uppercase;
+  text-decoration: none;
 
   @if $size == "base" {
     padding: 16px 24px;
@@ -22,5 +23,9 @@
 
   @if $size == "round" {
     padding: 8px;
+  }
+
+  @if $reverse == "true" {
+    color: map-get($theme, "black")
   }
 }

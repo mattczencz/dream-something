@@ -4,8 +4,9 @@
   justify-content: center;
   align-items: center;
   margin-top: $headerHeight;
-  padding: 0 42px;
-  height: calc(100vh - $headerHeight);
+  padding: 0 42px 408px;
+  background-color: #fff;
+  background-image: $white-gradient;
 
   h1 {
     font-size: 180px;
