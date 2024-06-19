@@ -18,7 +18,15 @@ const Navbar = () => {
           <ul className="nav-links">
             {utilityNavLinks.map((link) => (
               <li key={`utility-navlink-${link.replace(' ', '-')}`}>
-                <a href="/">{link}</a>
+                <a
+                  href={
+                    link === 'Careers'
+                      ? '/'
+                      : '#' + link.replace(' ', '-').toLowerCase()
+                  }
+                >
+                  {link}
+                </a>
               </li>
             ))}
           </ul>

@@ -4,7 +4,7 @@ import Specialties from './Specialties';
 
 const AboutUs = () => {
   return (
-    <section className="about-us">
+    <section id="about-us" className="about-us">
       <AboutUsHeadline />
       <Specialties />
       <Contact />

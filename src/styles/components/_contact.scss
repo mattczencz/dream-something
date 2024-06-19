@@ -68,6 +68,10 @@
       align-items: center;
       gap: 16px;
       margin-top: 13px;
+
+      &:hover {
+        background-color: map-get($theme, "purple");
+      }
     }
   }
 }

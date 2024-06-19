@@ -1,5 +1,6 @@
 import { FaArrowRight } from 'react-icons/fa6';
 import NewsImageGrid from './NewsImageGrid';
+import { motion } from 'framer-motion';
 
 const News = () => {
   const events = [
@@ -21,7 +22,13 @@ const News = () => {
   ];
 
   return (
-    <section className="news">
+    <motion.section
+      className="news"
+      initial={{ marginTop: 0 }}
+      whileInView={{ marginTop: -450 }}
+      transition={{ ease: 'easeOut', duration: 1, stiffness: 36, damping: 12 }}
+      viewport={{ once: true }}
+    >
       <NewsImageGrid />
       <div className="upcoming-events">
         <h4 className="eyebrow">Upcoming events</h4>
@@ -43,7 +50,7 @@ const News = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

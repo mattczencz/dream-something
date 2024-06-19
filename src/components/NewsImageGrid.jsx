@@ -2,6 +2,7 @@ import imageOne from '../assets/Images/Frame 15.jpg';
 import imageTwo from '../assets/Images/Frame 25.jpg';
 import imageThree from '../assets/Images/Frame 26.jpg';
 import arrowRight from '../assets/arrow-right.svg';
+import { motion } from 'framer-motion';
 
 const NewsImageGrid = () => {
   const imageData = [
@@ -30,7 +31,18 @@ const NewsImageGrid = () => {
     <div className="news-image-grid">
       {imageData.map((img) => (
         <div key={`news-image-${img.id}`} className={`img-${img.id}`}>
-          <div className="content">
+          <motion.div
+            initial={{ transform: 'translateY(100px)', opacity: 0 }}
+            whileInView={{ transform: 'translateY(0px)', opacity: 1 }}
+            transition={{
+              ease: 'easeOut',
+              duration: 1,
+              stiffness: 36,
+              damping: 12,
+            }}
+            viewport={{ once: true }}
+            className="content"
+          >
             <p className="tag">News</p>
             <div className="text-with-button">
               <p className="headline">{img.headline}</p>
@@ -38,7 +50,7 @@ const NewsImageGrid = () => {
                 <img src={arrowRight} alt="Right arrow" />
               </button>
             </div>
-          </div>
+          </motion.div>
           <img src={img.image} alt={img.alt} />
         </div>
       ))}
