@@ -1,9 +1,11 @@
 /* Variables / maps */
 @import "./colors";
+@import "./variables";
 @import "./mixins";
 
 /* Global */
 @import "./globals";
 
 /* Components */
-@import "./navbar";
+@import "./components/navbar";
+@import "./components/hero";
