@@ -19,4 +19,8 @@
   @if $size == "even" {
     padding: 24px;
   }
+
+  @if $size == "round" {
+    padding: 8px;
+  }
 }
