@@ -24,7 +24,7 @@ const News = () => {
     <section className="news">
       <NewsImageGrid />
       <div className="upcoming-events">
-        <h4>Upcoming events</h4>
+        <h4 className="eyebrow">Upcoming events</h4>
         <div className="events-grid">
           {events.map((event) => (
             <div

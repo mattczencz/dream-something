@@ -1,0 +1,40 @@
+.about-us {
+  position: relative;
+  padding: 178px 48px 59px 50px;
+  background-image: url("../assets/Images/wave-texture.jpg");
+  background-size: fill;
+  background-repeat: no-repeat;
+
+  /* White overlay for BG image */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255,255,255, 0.6);
+  }
+
+  .narrow-container {
+    position: relative;
+    max-width: 1097px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* About Us Headline */
+  .headline-container {
+    .eyebrow {
+      letter-spacing: calc(14px * 0.16); // 16% of 14px
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 96px;
+      line-height: 98.5px;
+    }
+  }
+}

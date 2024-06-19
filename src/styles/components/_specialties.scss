@@ -1,0 +1,119 @@
+.specialties {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 61px;
+  grid-row-gap: 0px;
+  margin-bottom: 100px;
+
+  .img-col {
+    position: relative;
+    grid-area: 1 / 1 / 2 / 2;
+
+    .image-wrapper {
+      position: absolute;
+      object-fit: cover;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .img-1 {
+      border-radius: 48px;
+      top: -12px;
+      width: 567px;
+      height: 503px;
+      left: -113px;
+    }
+
+    .img-2 {
+      border-radius: 24px;
+      right: 0;
+      bottom: 81px;
+      height: 369px;
+      width: 283px;
+      z-index: 1;
+    }
+
+    .img-3 {
+      border-radius: 24px;
+      left: 0;
+      bottom: 0;
+      height: 282px;
+      width: 278px;
+    }
+  }
+
+  .content {
+    grid-area: 1 / 2 / 2 / 3;
+    padding: 109px 0 190px;
+
+    h3 {
+      margin: 0 0 20px;
+      font-size: 40px;
+    }
+
+    p {
+      margin: 0 0 36px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: map-get($theme, "med-gray");
+
+      &.sub-headline {
+        margin: 0 0 11px;
+        font-size: 24px;
+        font-weight: 500;
+      }
+    }
+
+    .stats {
+      display: flex;
+      gap: 24px;
+      padding: 16px 60px 16px 52px;
+      margin-bottom: 20px;
+      background-color: map-get($theme, "off-white");
+      border-radius: 16px;
+      border-left: 6px solid map-get($theme, "orange");
+      align-items: center;
+
+      h2 {
+        margin: 0;
+        font-size: 96px;
+        line-height: 100px;
+        font-weight: 600;
+      }
+
+      .stat-info {
+        p {
+          margin: 0 0 8px;
+          color: map-get($theme, "med-gray-2");
+          text-transform: uppercase;
+          font-size: 12px;
+          letter-spacing: calc(12px * 0.24); // 24% of 12px
+        }
+
+        small {
+          font-style: italic;
+          color: map-get($theme, "med-gray-2");
+          font-size: 14px;
+          line-height: 1.2;
+        }
+      }
+    }
+
+    .cta {
+      @include cta-button(map-get($theme, "orange"), "large");
+      display: flex;
+      width: fit-content;
+      align-items: center;
+      gap: 16px;
+
+      &:hover {
+        background-color: map-get($theme, "purple");
+      }
+    }
+  }
+}
