@@ -2,7 +2,7 @@ import { FaArrowRight } from 'react-icons/fa6';
 
 const Contact = () => {
   return (
-    <div className="contact">
+    <div id="contact-us" className="contact">
       <div className="content">
         <h4 className="eyebrow">Form field callout ipsum</h4>
         <h3>A simple headline facu consecteur</h3>
