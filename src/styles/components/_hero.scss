@@ -1,0 +1,29 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: $headerHeight;
+  padding: 0 42px;
+  height: calc(100vh - $headerHeight);
+
+  h1 {
+    font-size: 180px;
+    text-align: center;
+    line-height: 160px;
+    margin: 0;
+    color: map-get($theme, "med-gray");
+  }
+
+  .parallax-heading {
+    background-image: url("../assets/Images/headline.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-clip: text;
+    background-position-y: 225px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding-bottom: 40px;
+    margin-bottom: 18px;
+  }    
+}

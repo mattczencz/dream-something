@@ -1,0 +1,100 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  
+  .utility-nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: map-get($theme, "off-white");
+
+    .angled-bg {
+      display: flex;
+      justify-content: flex-end;
+      padding: 13px 40px 13px 128px;
+      align-items: center;
+      background-color: map-get($theme, "off-white");
+      background-image: linear-gradient(45deg, transparent 9%, rgba(9,6,43,0.05) 9%);
+      width: fit-content;
+    }
+
+    .search-form {
+      margin-left: 38px;
+      border-bottom: 1px solid map-get($theme, "black");
+      padding: 5px 2px;
+      
+      input {
+        border: none;
+        background-color: transparent;
+        font-size: 15px;
+        font-weight: 500;
+        color: map-get($theme, "black");
+
+        &::placeholder {
+          font-size: 15px;
+          font-weight: 500;
+          color: map-get($theme, "black");
+        }
+        
+        &::after {
+          content: '';
+          display: block;
+          background-image: url("../assets/search.svg");
+
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      button[type="submit"] {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .primary-nav {
+    background-color: map-get($theme, "white");
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid map-get($theme, "light-gray");
+
+    div {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .cta {
+      @include cta-button(map-get($theme, "orange"));
+
+      &:hover {
+        background-color: map-get($theme, "purple");
+      }
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 24px;
+
+    a {
+      text-decoration: none;
+      color: map-get($theme, "black");
+      font-weight: 500;
+
+      &:hover {
+        color: map-get($theme, "orange");
+      }
+    }
+  }
+}
+
