@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="angled-bg">
           <ul className="nav-links">
             {utilityNavLinks.map((link) => (
-              <li>
+              <li key={`utility-navlink-${link.replace(' ', '-')}`}>
                 <a href="/">{link}</a>
               </li>
             ))}
@@ -40,7 +40,7 @@ const Navbar = () => {
         <div>
           <ul className="nav-links">
             {primaryNavLinks.map((link) => (
-              <li>
+              <li key={`primary-navlink-${link.replace(' ', '-')}`}>
                 <a href="/">{link}</a>
               </li>
             ))}
