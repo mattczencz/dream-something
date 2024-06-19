@@ -5,11 +5,8 @@
     padding: 85px 34px 48px;
     background-color: map-get($theme, "off-white-2");
 
-    h4 {
+    .eyebrow {
       margin: 0 0 0 24px;
-      text-transform: uppercase;
-      font-size: 14px;
-      font-weight: 700;
       letter-spacing: calc(14px * 0.24); // 24% of 14px
     }
   }
