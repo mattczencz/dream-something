@@ -1,3 +1,9 @@
-body {
-  background-color: #282828;
-}
+/* Variables / maps */
+@import "./colors";
+@import "./mixins";
+
+/* Global */
+@import "./globals";
+
+/* Components */
+@import "./navbar";

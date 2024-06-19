@@ -1,0 +1,11 @@
+$theme: (
+  "black": #000,
+  "med-gray": #1a1a1a,
+  "light-gray": #dfdfe2,
+  "off-white": #f1f1f1,
+  "white": #fff,
+  "orange": #FF5B01,
+  "purple": #7D1A73,
+);
+
+$white-gradient: linear-gradient(map-get($theme, "white"), #E4E4E7);

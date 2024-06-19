@@ -1,0 +1,22 @@
+@mixin cta-button($color, $size: "base") {
+  background-color: $color;
+  color: map-get($theme, "white");
+  border: none;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.88px; // 24% of 12
+  text-transform: uppercase;
+
+  @if $size == "base" {
+    padding: 16px 24px;
+  }
+
+  @if $size == "large" {
+    padding: 24px 36px;
+  }
+
+  @if $size == "even" {
+    padding: 24px;
+  }
+}
